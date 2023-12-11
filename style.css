@@ -1,0 +1,326 @@
+/* CSS Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a{
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: #0B141E;
+    color: #fff;
+}
+
+/* Header */
+
+.header{
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #39FF14;
+}
+
+.menu-bar a{
+    font-size: 1.5rem;
+    margin-left: 3.5rem;
+    transition: 0.4s ease;
+}
+
+.menu-bar a:hover{
+    color: #39FF14;    
+}
+
+#menu-btn{
+    font-size: 3rem;
+    display: none;
+}
+
+section{
+    padding: 10rem 10%;
+    min-height: 100vh;
+}
+
+/* Home */
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-bio h3{
+    font-size: 2.5rem;
+}
+
+span{
+    color: #39FF14;
+}
+
+.home-bio h1{
+    font-size: 3.5rem;
+    line-height: 1.4;
+}
+
+.home-bio p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.profile-pic img{
+    width: 30vw;
+    border-radius: 50%;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.social-media a{
+    width: 3.8rem;
+    height: 3.8rem;
+    font-size: 2.2rem;
+    margin: 1rem 1rem 2rem 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+.social-media a:hover{
+    color: #39FF14;
+    box-shadow: 0 0 1rem #39FF14;
+}
+
+.btn{
+    display: inline-block;
+    background: #39FF14;
+    margin: 2rem 0;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.btn:hover{
+    color: #39FF14;
+    background: #000;
+    box-shadow: 0 0 1rem #39FF14;
+}
+/* About */
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading{
+    font-size: 3.3rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.about-items{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 3rem; 
+}
+
+.about-resume h3{
+    font-size: 2.4rem;
+}
+
+.about-text p{
+    font-size: 1.8rem;
+}
+
+
+/* Learnings */
+.learning{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.learning-items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+
+.learning-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.learning-card:hover{
+    border-radius: 1rem solid;
+    transform: scale(1.05);
+}
+
+.learning-card .bx{
+    font-size: 8rem;
+    transition: 0.4s ease;
+}
+
+.learning-card .bx:hover{
+    color: #39FF14;
+}
+
+.learning-card h3{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.learning-card p{
+    text-align: center;
+    font-size: 1.3rem;
+    opacity: 0.5;
+}
+
+/* Hobby */
+/* Contact */
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    display: grid;
+    row-gap: 1rem;
+}
+
+form input,
+textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color:#fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    resize: none;
+}
+
+/* Footer */
+.footer{
+    padding: 2rem 10%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+hr{
+    margin: 1rem;
+    border-bottom: thin solid #fff;
+}
+/* Make Responsive */
+@media (max-width: 1200px){
+    html{
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 992px){
+    .header{
+        padding: 2rem 4%;
+    }
+    .home img{
+        width: 40vw;
+    }
+}
+
+@media (max-width: 767px){
+    #menu-btn{
+        display: block;
+    }
+    .menu-bar{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+    .menu-bar.active{
+        display: block;
+    }
+    .menu-bar a{
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+    .home, .about-items{
+        flex-direction: column;
+    }
+    .home img{
+        width: 80vw;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .learning-items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 620px){
+    .learning-items{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .heading{
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+/* Typing Animation */
+/* JS */
